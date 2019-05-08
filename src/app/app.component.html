@@ -1,2 +1,10 @@
-
+<div style="margin-bottom: 5px">
+<p-menubar [model]="menu">
+  <p-toggleButton (onChange)="onLog($event)"
+                  [(ngModel)]="loggedIn"
+                  onLabel="Logout" onIcon="pi pi-lock-open"
+                  offLabel="Login" offIcon="pi pi-lock"
+                  iconPos="right"></p-toggleButton>
+</p-menubar>
+</div>
 <router-outlet></router-outlet>

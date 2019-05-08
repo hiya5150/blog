@@ -6,6 +6,7 @@ import {Observable, of} from 'rxjs';
   providedIn: 'root'
 })
 export class DummyService {
+  loggedIn = false;
 
   posts = [
     new Post({ id: 0,
@@ -102,11 +103,19 @@ export class DummyService {
   ];
   constructor() { }
 
+  checkLogin(): Observable<boolean> {
+    return of(this.loggedIn);
+  }
+
   getAllPosts(): Observable<Post[]> {
     return of(this.posts);
   }
 
   getPostById(id): Observable<Post> {
     return of (this.posts[id]);
+  }
+
+  setLoginVal(newVal): void {
+    this.loggedIn = newVal;
   }
 }

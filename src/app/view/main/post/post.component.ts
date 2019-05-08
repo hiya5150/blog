@@ -3,6 +3,7 @@ import {DummyService} from '../../../model/dummy.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Post} from '../../../model/post';
 
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
